@@ -6,7 +6,60 @@ body{
     /*Essas duas abaixo servirá para o container ajustar quebrando a linha do texto, caso precise*/
     word-wrap: break-word;
     overflow-wrap: break-word;
+    
 }
+
+html{
+    height: 500vh;
+
+}
+
+.container{
+    max-width: 1280px;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*Garante que fique todos os icones bem distribuidos*/
+}
+
+header{
+    width: 100%;
+    padding: 60px 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header ul{
+    list-style-type:none ;
+}
+
+header ul li{
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.banner{
+height: 100vh;
+background-image: url(imagens/img1.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+
+}
+
+
+
+
 
 h1,h2,h3,h4,h5,h6{
     font-weight: 900;
@@ -84,7 +137,7 @@ background: -o-linear-gradient(to bottom, rgba(0,0,0,0)0, rgba(0,0,0,0)40%, #000
 
 /**/
 section.module.parallax-1{
-    background-image:url(imagens/img1.jpg);
+    background-image:url(imagens/fundo\ \(2\).png);
 }
 
 section.module.parallax-2{
