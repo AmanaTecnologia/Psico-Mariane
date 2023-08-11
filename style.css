@@ -13,6 +13,10 @@ html{
     height: 500vh;
 
 }
+/*Menu*/
+
+
+
 
 .container{
     max-width: 1280px;
@@ -31,6 +35,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 8;
 }
 
 header ul{
@@ -49,16 +54,11 @@ header ul li a{
 
 .banner{
 height: 100vh;
-background-image: url(imagens/img1.jpg);
+background-image: url(imagens/espiral.svg);
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-
-
 }
-
-
-
 
 
 h1,h2,h3,h4,h5,h6{
@@ -103,6 +103,8 @@ section.module.content{
     background-color: #ece7d5;
 }
 
+
+/*Efeito parallax*/
 section.module.parallax{
 
     display: flex; /**/
@@ -136,9 +138,7 @@ background: -o-linear-gradient(to bottom, rgba(0,0,0,0)0, rgba(0,0,0,0)40%, #000
 }
 
 /**/
-section.module.parallax-1{
-    background-image:url(imagens/fundo\ \(2\).png);
-}
+
 
 section.module.parallax-2{
     background-image:url(imagens/logotipo\ \(2\).png);    
@@ -154,4 +154,167 @@ section.module.parallax h1{
     font-size: 58px;
     z-index: 50;
 
+}
+
+
+/*footer*/
+@import url('https://fonts.googleapis.com/css2?family=Buda:wght@300&family=Poiret+One&family=Pompiere&family=Ysabeau+SC:wght@300&display=swap');
+*{
+    font-family: 'Ysabeau SC', 'sans-serif';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px; /*Espaçamento entre as letras*/
+}
+
+footer{
+    width: 100%;
+    color: var(--main-neutral-30);
+}
+
+.footer-link{
+    text-decoration: none;
+}
+
+#footer_content{
+    background-color: var(--main-bg-color);
+    display: grid; /*Distribuindo o conteúdo em 4 colunas*/
+    grid-template-columns: repeat(4,1fr); /*especificando que queremos 4 colunas*/
+    padding: 3rem 3.5rem;
+}
+/*Alterações na primeira coluna*/
+#footer_contacts h1 {
+    margin-bottom: 0.75rem;
+    margin-left: 1.45rem;
+}
+
+#footer_contacts p {
+    margin-bottom: 0.75rem;
+    margin-left: 1.65rem;
+}
+
+
+/*Alterações nos ícones da segunda coluna*/
+#footer_social_media{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#footer_social_media .footer-link{
+    /*Depois de alterar o fundo de cada ícone, percebemos que não está alinhado, vamos usar essas três para fazer isso*/
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+
+    height: 2.5rem; /*Essa largura e altura é para conseguirmos colocar um background separado para cada ícone*/
+    width: 2.5rem;  
+    color: var(--main-text-color); /*Cor do ícone*/
+    border-radius: 50%; 
+    transition: all 0.4s; /*transição para quando passar o mouse emcima do icone das midias sociais, ele não mudar a opacidade tão rápido*/    
+}
+
+/*o estilo definido para o seletor ":hover" será aplicado temporariamente*/
+#footer_social_media .footer-link:hover {
+    opacity: 0.8; /*Ao passar o mouse vimos que essa mudança de opacidade está muito rápida, para ser mais suave vamos adicionar uma transição na sessão #footer_social_media .footer-link*/
+}
+
+#footer_social_media .footer-link i{
+    /*aumentando o tamanho dos icones dentro da bolinha*/
+    font-size: 1.25rem;
+}
+
+/*Alterando o background de cada ícone*/
+#instagram{
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+#facebook{
+    background: #4267b3;
+}
+#LinkedIn{
+    background: #0e76a8;
+}
+#whatsapp{
+    background: #25d366;
+}
+
+/*alterando as listas*/
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;    
+}
+
+
+/*mudando a cor dos links que ficam dentro do footer link*/
+.footer-list .footer-link{
+    color: var(--main-neutral-0); /*Alterando a cor da letra, e também iremos adicionar um hover para quando o mouse passar por cima dessas mesmas palavras*/
+}
+
+.footer-list .footer-link:hover{
+    color: var(--main-text-color);
+    transition: all 0.4s; /*Da mesma forma que a opcaidade, vamos fazer essa mudança de cor ter uma transição suave*/
+}
+
+#footer_subscribe{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer_subscribe p{
+    color: var(--main-neutral-0);
+}
+
+/*Customizando a caixa de texto*/
+#input_group{
+    display: flex;
+    align-items: center;
+    background-color: var(--main-neutral-0);
+    border-radius: 4px;
+}
+
+/*Tirando o estilo do input para a visualização das definições acima aparecerem*/
+#input_group input{
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#input_group button{
+    background-color: #fff;
+    border: none;
+    color: var(--main-bg-color);
+    padding: 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+}
+#input_group button:hover{
+    opacity: 0.8;
+    transition: all 0.4s;
+}
+
+#footer_copyright{
+    display: flex;
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+}
+
+/*Deixando responsivo*/
+@media screen and(max-width: 768px) {
+    #footer_content{
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and(max-width: 426px) {
+    #footer_content{
+        grid-template-columns: repeat(1,1fr);
+        padding: 3rem 2rem;
+    }
 }
