@@ -15,14 +15,14 @@ html{
 }
 /*Menu*/
 .btn-contato button{
+    padding: 0.25rem;
+    font-size: 1.25rem;
     background-color: #BC974F;
     width: 100%;
-    border-radius: 1.5rem;
+    border-radius: 2.5rem;
     border-style: none;
+    margin-bottom: 1rem;
 }
-
-
-
 
 
 .container{
@@ -36,13 +36,43 @@ html{
     justify-content: space-between; /*Garante que fique todos os icones bem distribuidos*/
 }
 
+/* No seu arquivo style.css, você pode adicionar as seguintes regras de CSS */
+
+/* Estilos para telas menores (dispositivos móveis) */
+@media screen and (max-width: 767px) {
+    /* Aumentar o tamanho da logo para dispositivos móveis */
+    header img {
+        width: 100%; /* Faz a logo ocupar toda a largura do seu container */
+        max-width: 200px; /* Define um tamanho máximo para a logo */
+        margin-bottom: 0.5rem; /* Reduz o espaçamento inferior */
+    }
+    
+    /* Centralizar o botão de contato */
+    .btn-contato {
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
+
+/* Estilos para telas um pouco maiores (tablets, etc.) */
+@media screen and (min-width: 768px) {
+    /* Ajuste o tamanho da logo, se necessário, para telas maiores */
+    header img {
+        max-width: 250px;
+    }
+}
+
+
+
 header{
+    background-color: #a38a8a;
     width: 100%;
-    padding: 60px 4%;
+    padding: 30px 4%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;/*para corrigir o sumuço do menu em algumas sessões*/
+    transition: 1s;
 }
 
 /*estilizando a classe inventada no javascript*/
@@ -335,5 +365,56 @@ footer{
     #footer_content{
         grid-template-columns: repeat(1,1fr);
         padding: 3rem 2rem;
+    }
+}
+
+
+/* Estilos gerais para dispositivos móveis */
+@media screen and (max-width: 767px) {
+    /* Centralizar o menu */
+    header nav {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    /* Ajustar a margem do botão de contato */
+    .btn-contato button {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Ajustar o espaçamento do conteúdo nas seções */
+    section.module.content p {
+        margin-bottom: 20px;
+    }
+
+    /* Ajustar o tamanho da fonte nas seções */
+    section.module.content h2 {
+        font-size: 24px;
+    }
+
+    /* Ajustar o tamanho da fonte no rodapé */
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+
+    /* Ajustar o tamanho da logo no cabeçalho */
+    header img {
+        width: 200px;
+        max-width: 100%;
+    }
+}
+
+/* Estilos para tablets e telas um pouco maiores */
+@media screen and (min-width: 768px) {
+    /* Ajustar o tamanho da logo no cabeçalho para telas maiores */
+    header img {
+        max-width: 250px;
+    }
+
+    /* Ajustar o tamanho da fonte no cabeçalho */
+    header ul li a {
+        font-size: 18px;
     }
 }
