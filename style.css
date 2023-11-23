@@ -1,7 +1,6 @@
 body{
     margin: 0;
     padding: 0;
-    color: #242424;
     font-family: sans-serif;
     /*Essas duas abaixo servirá para o container ajustar quebrando a linha do texto, caso precise*/
     word-wrap: break-word;
@@ -122,7 +121,6 @@ h1,h2,h3,h4,h5,h6{
 
 main{
     display: block;
-    background-color: #ea0808;
 }
 
 .container{
@@ -218,7 +216,7 @@ section.module.parallax h1{
 
 footer{
     width: 100%;
-    color: var(--main-neutral-30);
+    color: rgb(32, 29, 29);
 }
 
 .footer-link{
@@ -226,14 +224,18 @@ footer{
 }
 
 #footer_content{
-    background-color: red;
     display: grid; /*Distribuindo o conteúdo em 4 colunas*/
     grid-template-columns: repeat(4,1fr); /*especificando que queremos 4 colunas*/
     padding: 3rem 3.5rem;
-    margin-top: 500px;
     
 }
+
 /*Alterações na primeira coluna*/
+#footer_contacts{
+    margin-left: 50%;
+    margin-top: 0;
+} 
+
 #footer_contacts h1 {
     margin-bottom: 0.75rem;
     margin-left: 1.45rem;
@@ -250,7 +252,8 @@ footer{
     display: flex;
     gap: 2rem;
     margin-top: 1.5rem;
-    background-color: black;
+    /* background-color: black; */
+    width: 200px;
 }
 
 #footer_social_media .footer-link{
@@ -261,7 +264,7 @@ footer{
 
     height: 2.5rem; /*Essa largura e altura é para conseguirmos colocar um background separado para cada ícone*/
     width: 2.5rem;  
-    color: var(--main-text-color); /*Cor do ícone*/
+    color: black; /*Cor do ícone*/
     border-radius: 50%; 
     transition: all 0.4s; /*transição para quando passar o mouse emcima do icone das midias sociais, ele não mudar a opacidade tão rápido*/    
 }
@@ -296,68 +299,30 @@ footer{
     flex-direction: column;
     gap: 0.75rem;
     list-style: none;    
-    background-color: #a38a8a;
+    padding: 0;
+    margin-left: 70%;
+    width: 200px;
 }
 
 
 /*mudando a cor dos links que ficam dentro do footer link*/
 .footer-list .footer-link{
-    color: var(--main-neutral-0); /*Alterando a cor da letra, e também iremos adicionar um hover para quando o mouse passar por cima dessas mesmas palavras*/
+    color: black; 
 }
 
 .footer-list .footer-link:hover{
-    color: var(--main-text-color);
-    transition: all 0.4s; /*Da mesma forma que a opcaidade, vamos fazer essa mudança de cor ter uma transição suave*/
-}
-
-#footer_subscribe{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    background-color: #BC974F;
-}
-
-#footer_subscribe p{
-    color: var(--main-neutral-0);
-}
-
-/*Customizando a caixa de texto*/
-#input_group{
-    display: flex;
-    align-items: center;
-    background-color: var(--main-neutral-0);
-    border-radius: 4px;
-}
-
-/*Tirando o estilo do input para a visualização das definições acima aparecerem*/
-#input_group input{
-    all: unset;
-    padding: 0.75rem;
-    width: 100%;
-}
-
-#input_group button{
-    background-color: #fff;
-    border: none;
-    color: var(--main-bg-color);
-    padding: 1.25rem;
-    font-size: 1.125rem;
-    height: 100%;
-    border-radius: 0px 4px 4px 0px;
-    cursor: pointer;
-}
-#input_group button:hover{
-    opacity: 0.8;
+    color: #a38a8a;
     transition: all 0.4s;
 }
 
 #footer_copyright{
-    display: flex;
+    display:flex;
     justify-content: center;
+    align-items: center;
     font-size: 0.9rem;
-    padding: 1.5rem;
-    background-color: #7f37c9;
-    
+    margin-top: auto;
+    color: black; 
+    background-color: #a38a8a;
 }
 
 /*Deixando responsivo*/
