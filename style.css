@@ -5,8 +5,7 @@ body{
     font-family: sans-serif;
     /*Essas duas abaixo servirá para o container ajustar quebrando a linha do texto, caso precise*/
     word-wrap: break-word;
-    overflow-wrap: break-word;
-    
+    overflow-wrap: break-word;  
 }
 
 html{
@@ -123,7 +122,7 @@ h1,h2,h3,h4,h5,h6{
 
 main{
     display: block;
-    background-color: #fff;
+    background-color: #ea0808;
 }
 
 .container{
@@ -206,6 +205,7 @@ section.module.parallax h1{
 }
 
 
+
 /*footer*/
 @import url('https://fonts.googleapis.com/css2?family=Buda:wght@300&family=Poiret+One&family=Pompiere&family=Ysabeau+SC:wght@300&display=swap');
 *{
@@ -226,10 +226,12 @@ footer{
 }
 
 #footer_content{
-    background-color: var(--main-bg-color);
+    background-color: red;
     display: grid; /*Distribuindo o conteúdo em 4 colunas*/
     grid-template-columns: repeat(4,1fr); /*especificando que queremos 4 colunas*/
     padding: 3rem 3.5rem;
+    margin-top: 500px;
+    
 }
 /*Alterações na primeira coluna*/
 #footer_contacts h1 {
@@ -248,6 +250,7 @@ footer{
     display: flex;
     gap: 2rem;
     margin-top: 1.5rem;
+    background-color: black;
 }
 
 #footer_social_media .footer-link{
@@ -293,6 +296,7 @@ footer{
     flex-direction: column;
     gap: 0.75rem;
     list-style: none;    
+    background-color: #a38a8a;
 }
 
 
@@ -310,6 +314,7 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    background-color: #BC974F;
 }
 
 #footer_subscribe p{
@@ -351,6 +356,8 @@ footer{
     justify-content: center;
     font-size: 0.9rem;
     padding: 1.5rem;
+    background-color: #7f37c9;
+    
 }
 
 /*Deixando responsivo*/
