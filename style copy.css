@@ -192,7 +192,7 @@ section.module.parallax h1 {
 footer {
     position: relative;
     width: 100%;
-    background: #3586ff;
+    background: var(--cor-identidade-mariane-fundo);
     min-height: 100px;
     padding: 0px;
     display: flex;
@@ -255,7 +255,7 @@ footer .onda {
     left: 0;
     width: 100%;
     height: 100px;
-    background: url('/imagens/wave.png');
+    background: url('/imagens/onda1.png');
     background-size: 1000px 100px;
 }
 
